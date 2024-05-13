@@ -9,7 +9,7 @@
   }
 
   @each $color, $value in $grays {
-    @include text-emphasis-variant(".text-gray-#{$color}", $value, true);
+    --#{$variable-prefix}#{$color}: #{$value};
   }
 
   // Use `inspect` for lists so that quoted items keep the quotes.
